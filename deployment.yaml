@@ -19,3 +19,7 @@ spec:
           image: ghcr.io/synixeb/k8smicroproject
           ports:
             - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
